@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import { motion } from "framer-motion";
@@ -76,7 +77,7 @@ const Work = () => {
   console.log(projectData);
 
   const [project, setProject] = useState(projects[0]);
-  const handleSlideChange = (swiper) => {
+  const handleSlideChange = (swiper: any) => {
     const currentIndex = swiper.activeIndex;
     setProject(projects[currentIndex]);
   };
