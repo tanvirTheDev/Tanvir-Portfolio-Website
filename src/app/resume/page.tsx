@@ -22,7 +22,7 @@ const Resume = () => {
   const about = {
     title: "About me",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit est consectetur possimus iste provident doloremque rem sed non quisquam sapiente.",
+      "I am a passionate and dedicated developer with over 2 years of experience in crafting dynamic, responsive, and user-focused web solutions. With a strong foundation in web technologies and a commitment to excellence, I strive to bring creativity and innovation to every project I undertake.",
     info: [
       {
         fieldName: "Name",
@@ -62,51 +62,61 @@ const Resume = () => {
   // Experience data
   const experience = {
     icon: "",
-    title: "My Experiece",
+    title: "My Experience",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam officiis dolorum sit ex nulla pariatur culpa distinctio quasi excepturi corrupti.",
+      "Throughout my journey in the tech industry, I have honed my skills by collaborating with innovative teams and contributing to impactful projects. My experience reflects a strong commitment to delivering high-quality solutions and growing as a professional.",
     items: [
       {
         company: "CopEarn Private Limited",
-        position: "Fontend Developer - Intern",
+        position: "Frontend Developer - Intern",
         duration: "2022 - 1 month",
+        description:
+          "During my internship at CopEarn Private Limited, I worked closely with the development team to create dynamic and user-friendly interfaces. This experience allowed me to strengthen my proficiency in modern web technologies like React.js and provided valuable insights into industry best practices.",
       },
     ],
   };
 
-  // Education data
   const education = {
     icon: "/assets/resume/cap.svg",
     title: "My Education",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam officiis dolorum sit ex nulla pariatur culpa distinctio quasi excepturi corrupti.",
+      "My educational journey is a blend of academic excellence and practical learning experiences, focused on engineering, web development, and innovative problem-solving techniques.",
     items: [
       {
         institution: "Programming Hero",
         degree: "Web Development",
         duration: "2021 - 2022",
+        description:
+          "Completed an in-depth web development program, mastering technologies such as HTML, CSS, JavaScript, and React to build dynamic and responsive websites.",
       },
       {
         institution: "Programming Hero",
-        degree: "Next Level Web Development - Fontend Track",
+        degree: "Next Level Web Development - Frontend Track",
         duration: "2023 - 2024",
+        description:
+          "Advanced my skills in frontend development, focusing on modern tools and frameworks like Next.js, TypeScript, and Redux to create cutting-edge user interfaces.",
       },
       {
-        institution: "Rangpur Politechnic Institute",
+        institution: "Rangpur Polytechnic Institute",
         degree: "Diploma in Electrical Engineering",
         duration: "2018 - 2022",
+        description:
+          "Earned a diploma in Electrical Engineering, gaining a strong foundation in electrical systems, circuit design, and practical applications in engineering.",
       },
       {
         institution: "Institute of Engineers - IEB",
-        degree: "BSC in EEE",
+        degree: "BSc in Electrical and Electronics Engineering",
         duration: "2023 - 2027",
+        description:
+          "Currently pursuing a Bachelor of Science in Electrical and Electronics Engineering, focusing on advanced topics like power systems, electronics, and sustainable technologies.",
       },
     ],
   };
+
   const skills = {
     title: "My skills",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem rerum consectetur eaque explicabo, fugiat harum a pariatur quisquam quibusdam molestiae.",
+      "Over the years, I have developed a versatile skill set in web development and design, empowering me to create dynamic, user-friendly, and aesthetically pleasing applications.",
     skillList: [
       {
         icon: <FaHtml5 />,
@@ -173,12 +183,12 @@ const Resume = () => {
                   {experience.description}
                 </p>
                 <ScrollArea className="h-[480px]">
-                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                  <ul className="grid grid-cols-1  gap-[30px]">
                     {experience.items.map((item, index) => {
                       return (
                         <li
                           key={index}
-                          className="bg-[#232339] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                          className="bg-[#232339]  py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                         >
                           <span className="text-primary-accent">
                             {item.duration}
@@ -193,6 +203,10 @@ const Resume = () => {
                               {item.company}
                             </span>
                           </div>
+                          {/* Item description */}
+                          <p className="text-white/60 text-sm text-center lg:text-left mt-2 leading-relaxed">
+                            {item.description}
+                          </p>
                         </li>
                       );
                     })}
@@ -208,26 +222,30 @@ const Resume = () => {
                   {education.description}
                 </p>
                 <ScrollArea className="h-[480px]">
-                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                  <ul className="grid grid-cols-1  gap-[30px]">
                     {education.items.map((item, index) => {
                       return (
                         <li
                           key={index}
-                          className="bg-[#232339] h-[200px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                          className="bg-[#232339] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                         >
                           <span className="text-primary-accent">
                             {item.duration}
                           </span>
-                          <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
+                          <h3 className="text-[18px] max-w-[260px] min-h-[60px] leading-normal text-center lg:text-left">
                             {item.degree}
                           </h3>
                           <div className="flex items-center gap-3">
                             {/* dot */}
                             <span className="size-[6px] rounded-full bg-primary-accent"></span>
-                            <span className="text-white/60">
+                            <span className="text-white/60 leading-normal">
                               {item.institution}
                             </span>
                           </div>
+                          {/* Item Description */}
+                          <p className="text-white/60 text-sm text-center lg:text-left mt-2 leading-relaxed">
+                            {item.description}
+                          </p>
                         </li>
                       );
                     })}

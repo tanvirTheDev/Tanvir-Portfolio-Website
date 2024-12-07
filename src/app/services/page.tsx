@@ -8,28 +8,28 @@ const Services = () => {
       num: "01",
       title: "Web Development",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harucorporis.",
+        "Building visually stunning, highly responsive, and scalable websites tailored to meet your unique business needs, ensuring seamless performance and user engagement.",
       href: "",
     },
     {
       num: "02",
       title: "UI/UX Design",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harucorporis.",
+        "Crafting intuitive and aesthetically pleasing user experiences, turning your ideas into beautiful, user-centric interfaces that drive engagement and retention.",
       href: "",
     },
     {
       num: "03",
       title: "Logo Design",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harucorporis.",
+        "Designing iconic and memorable logos that capture your brand's essence, ensuring it stands out in the competitive market with a lasting impression.",
       href: "",
     },
     {
       num: "04",
       title: "SEO",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harucorporis.",
+        "Optimizing your digital presence to improve search engine rankings, drive organic traffic, and boost your visibility to achieve unparalleled online success.",
       href: "",
     },
   ];
