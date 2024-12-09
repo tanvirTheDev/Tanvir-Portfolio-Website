@@ -1,4 +1,5 @@
 import PageTransition from "@/components/PageTransition";
+import Footer from "@/components/shared/Footer";
 import Header from "@/components/shared/Header";
 import StairTransition from "@/components/StairTransition";
 import type { Metadata } from "next";
@@ -27,6 +28,7 @@ export default function RootLayout({
         <Header />
         <StairTransition />
         <PageTransition>{children}</PageTransition>
+        <Footer />
       </body>
     </html>
   );
