@@ -23,19 +23,21 @@ const Work = () => {
   const projects = [
     {
       num: "01",
-      catagory: "fontend",
-      title: "project 1",
+      catagory: "Full Stack",
+      title: "Donation Website",
       description:
-        " Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero fuga sapiente laudantium optio aspernatur nesciunt voluptatem laborum. ",
+        "A Full-Stack Donation Website enables users to explore campaigns, donate securely, and track campaign progress. Built with HTML5, CSS3, JavaScript, Node.js, Express.js, and SSL, it ensures a smooth and secure donation experience.",
       stack: [
         { name: "html 5" },
         { name: "css 3" },
         { name: "javascript" },
-        { name: "react" },
+        { name: "node js" },
+        { name: "express js" },
+        { name: "sslEcomarz" },
       ],
-      image: "/assets/work/thumb1.png",
-      live: "",
-      github: "",
+      image: "/assets/work/donationImg.png",
+      live: "https://tanvir-foundation.vercel.app/",
+      github: "https://github.com/Dev-Tanvir-Ahamed/Tanvir-Portfolio-Website",
     },
     {
       num: "02",
@@ -104,6 +106,7 @@ const Work = () => {
               <h2 className="text-[42px] leading-none font-bold text-white group-hover:text-primary-accent transition-all duration-500 capitalize">
                 {project.catagory}
               </h2>
+              <h1 className="text-2xl text-primary-accent">{project.title}</h1>
               <p className="text-white/60">{project.description}</p>
               <ul className="flex gap-4">
                 {project.stack.map((item, index) => {
