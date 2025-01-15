@@ -1,5 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import myImage from "../../public/assets/myImage.png";
 const Photo = () => {
   return (
     <div className="w-full h-full relative">
@@ -19,14 +21,14 @@ const Photo = () => {
           }}
           className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute left-0 xl:left-3"
         >
-          {/* <Image
-            src={photo}
+          <Image
+            src={myImage}
             alt="photo"
             priority
             quality={100}
             fill
             className="object-contain"
-          /> */}
+          />
         </motion.div>
         {/* circle */}
         <motion.svg
