@@ -1,6 +1,8 @@
 import PageTransition from "@/components/PageTransition";
 import Footer from "@/components/shared/Footer";
 import Header from "@/components/shared/Header";
+import ScrollToTop from "@/components/shared/ScrollToTop";
+import WhatsAppButton from "@/components/shared/WhatsAppButton";
 import StairTransition from "@/components/StairTransition";
 import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
@@ -25,6 +27,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${jetBrainsMono.variable}`}>
+        <WhatsAppButton />
+        <ScrollToTop />
         <Header />
         <StairTransition />
         <PageTransition>{children}</PageTransition>

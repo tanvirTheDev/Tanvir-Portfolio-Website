@@ -35,7 +35,15 @@ const Services = () => {
   ];
 
   return (
-    <section className="min-h-[80vh] flex flex-col justify-center py-12 xl:py">
+    <section
+      id="services"
+      className="min-h-[80vh] bg-gray-900 flex flex-col justify-center py-12 xl:pb"
+    >
+      {/* add Service section */}
+      <h1 className="text-center text-5xl font-bold text-primary-accent py-10 mx-auto mb-5">
+        Services
+        <div className="w-20 h-px bg-white/50 mx-auto my-5"></div>
+      </h1>
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0 }}

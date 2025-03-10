@@ -11,23 +11,19 @@ const Nav = () => {
     },
     {
       name: "services",
-      path: "/services",
+      path: "#services",
     },
     {
       name: "resume",
-      path: "/resume",
+      path: "#resume",
     },
     {
       name: "work",
-      path: "/work",
-    },
-    {
-      name: "blog",
-      path: "/blog",
+      path: "#work",
     },
     {
       name: "contact",
-      path: "/contact",
+      path: "#contact",
     },
   ];
   const pathName = usePathname();

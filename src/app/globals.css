@@ -34,3 +34,7 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="number"] {
   -moz-appearance: textfield; /* Remove the spinner in Firefox */
 }
+
+html {
+  scroll-behavior: smooth;
+}
