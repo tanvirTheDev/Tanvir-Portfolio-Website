@@ -1,6 +1,6 @@
 import Contact from "@/components/Homepage/Contact/Contact";
 import HeroSection from "@/components/Homepage/HeroSection";
-import ProjectsSection from "@/components/Homepage/Projects/Projects";
+import ProjectsSection from "@/components/Homepage/ProjectsSection";
 import Resume from "@/components/Homepage/Resume/Resume";
 import Services from "@/components/Homepage/Services/Services";
 
@@ -11,6 +11,8 @@ export default function Home() {
       <Services />
       <Resume />
       <ProjectsSection />
+      {/* <ProjectsSection /> */}
+
       <Contact />
     </>
   );
