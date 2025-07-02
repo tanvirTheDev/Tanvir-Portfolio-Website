@@ -19,8 +19,8 @@ const projects = [
       "Prisma",
     ],
     category: "Full Stack",
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com/username/project",
+    liveUrl: "https://qmmerce.vercel.app",
+    githubUrl: "https://github.com/tanvirTheDev/qmmerce",
   },
   {
     id: 2,

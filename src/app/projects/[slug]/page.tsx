@@ -12,8 +12,29 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 
-// Sample project data - replace with your actual data source
-const projects = {
+const projects: {
+  [key: string]: {
+    id: number;
+    title: string;
+    slug: string;
+    description: string;
+    longDescription: string;
+    image: string;
+    gallery: string[];
+    technologies: string[];
+    category: string;
+    duration: string;
+    client: string;
+    year: string;
+    liveUrl?: string;
+    githubUrl?: string;
+    githubFrontendUrl?: string;
+    githubBackendUrl?: string;
+    features: string[];
+    challenges: string[];
+    learnings: string[];
+  };
+} = {
   "ecommerce-platform": {
     id: 1,
     title: "E-Commerce Platform",
@@ -22,12 +43,12 @@ const projects = {
       "A full-stack e-commerce platform built with Next.js and Stripe integration",
     longDescription:
       "This comprehensive e-commerce platform features a modern, responsive design with full shopping cart functionality, secure payment processing through Stripe, user authentication, order management, and an admin dashboard. The platform is built using Next.js 14 with TypeScript, Tailwind CSS for styling, and integrates with a PostgreSQL database for data persistence.",
-    image: "/images/ecommerce.png",
+    image: "/images/ecommerce/ecommerce.png",
     gallery: [
-      "/placeholder.svg?height=300&width=500",
-      "/placeholder.svg?height=300&width=500",
-      "/placeholder.svg?height=300&width=500",
-      "/placeholder.svg?height=300&width=500",
+      "/images/ecommerce/CategoryPage.png",
+      "/images/ecommerce/AdminPanel.png",
+      "/images/ecommerce/AdminAddProduct.png",
+      "/images/ecommerce/AddCategory.png",
     ],
     technologies: [
       "Next.js",
@@ -42,7 +63,8 @@ const projects = {
     client: "Personal Project",
     year: "2024",
     liveUrl: "https://qmmerce.vercel.app",
-    githubUrl: "https://github.com/tanvirTheDev/Tanvir-Portfolio-Website",
+    githubFrontendUrl: "https://github.com/tanvirTheDev/ecommerce-frontend",
+    githubBackendUrl: "https://github.com/tanvirTheDev/qmmerce-backend",
     features: [
       "User authentication and authorization",
       "Product catalog with search and filtering",
@@ -313,9 +335,24 @@ export default async function ProjectPage({
                         </Button>
                       </Link>
                     )}
-                    {project.githubUrl && (
+                    {project.githubFrontendUrl && (
                       <Link
-                        href={project.githubUrl}
+                        href={project.githubFrontendUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Button
+                          variant="outline"
+                          className="w-full border-gray-600 text-gray-300 hover:bg-primary-accent bg-transparent hover:text-black mb-3"
+                        >
+                          <Github className="w-4 h-4 mr-2" />
+                          Frontend Code
+                        </Button>
+                      </Link>
+                    )}
+                    {project.githubBackendUrl && (
+                      <Link
+                        href={project.githubBackendUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -324,10 +361,27 @@ export default async function ProjectPage({
                           className="w-full border-gray-600 text-gray-300 hover:bg-primary-accent bg-transparent hover:text-black"
                         >
                           <Github className="w-4 h-4 mr-2" />
-                          View Source Code
+                          Backend Code
                         </Button>
                       </Link>
                     )}
+                    {project.githubUrl &&
+                      !project.githubFrontendUrl &&
+                      !project.githubBackendUrl && (
+                        <Link
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Button
+                            variant="outline"
+                            className="w-full border-gray-600 text-gray-300 hover:bg-primary-accent bg-transparent hover:text-black"
+                          >
+                            <Github className="w-4 h-4 mr-2" />
+                            View Source Code
+                          </Button>
+                        </Link>
+                      )}
                   </div>
                 </CardContent>
               </Card>
@@ -335,6 +389,33 @@ export default async function ProjectPage({
           </div>
         </div>
       </section>
+
+      {/* Gallery Section */}
+      {project.gallery && project.gallery.length > 0 && (
+        <section className="py-12">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold mb-8 text-white text-center">
+              Project Gallery
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              {project.gallery.map((image, index) => (
+                <div
+                  key={index}
+                  className="relative rounded-xl overflow-hidden shadow-lg"
+                >
+                  <Image
+                    src={image || "/placeholder.svg"}
+                    alt={`${project.title} screenshot ${index + 1}`}
+                    width={600}
+                    height={400}
+                    className="w-full h-auto hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* CTA Section */}
       <section className="py-16 border-t border-gray-800">

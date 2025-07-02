@@ -70,9 +70,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
         <div className="flex items-center justify-between">
           <Link href={`/projects/${project.slug}`}>
-            <Button variant="ghost" className="hover:bg-gray-700 p-0">
-              View Details →
-            </Button>
+            <Button className="">View Details →</Button>
           </Link>
           <div className="flex items-center space-x-2">
             {project.githubUrl && (
