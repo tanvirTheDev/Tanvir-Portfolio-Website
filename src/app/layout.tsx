@@ -44,10 +44,10 @@ export const metadata: Metadata = {
     siteName: "Tanvir Ahamed",
     images: [
       {
-        url: "/og-image.jpg", // Add your OG image inside public folder
-        width: 1200,
-        height: 630,
-        alt: "Tanvir Ahamed Portfolio",
+        url: "https://www.tanvirthedev.com/profile.jpg", // Add your OG image inside public folder
+        width: 800,
+        height: 800,
+        alt: "Tanvir Ahamed",
       },
     ],
     locale: "en_US",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     description:
       "Hi, I'm Tanvir Ahamed (tanvirthedev). Check out my portfolio and blog about web development, JavaScript, and modern tech.",
     creator: "@tanvirthedev",
-    images: ["/og-image.jpg"],
+    images: ["https://www.tanvirthedev.com/profile.jpg"],
   },
   icons: {
     icon: "/favicon.ico",
