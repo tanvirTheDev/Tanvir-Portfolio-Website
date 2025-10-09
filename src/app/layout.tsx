@@ -96,6 +96,11 @@ export default function RootLayout({
                 "https://facebook.com/tanvirthedev",
                 "https://www.upwork.com/freelancers/~tanvirthedev",
                 "https://www.fiverr.com/tanvirthedev",
+                "https://medium.com/@tanvirthedev",
+                "https://dev.to/tanvirthedev",
+                "https://x.com/tanvirthedev",
+                "https://www.youtube.com/@tanvirthedev",
+                "https://tanvirthedev.medium.com",
               ],
               jobTitle: "Full-Stack Developer",
               worksFor: {
