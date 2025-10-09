@@ -5,7 +5,6 @@ import Resume from "@/components/Homepage/Resume/Resume";
 import Services from "@/components/Homepage/Services/Services";
 import type { Metadata } from "next";
 
-// ✅ Home Page–specific SEO
 export const metadata: Metadata = {
   title: "Portfolio of Tanvir Ahamed | Full-Stack Developer",
   description:
