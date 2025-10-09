@@ -1,0 +1,11 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+
+# Host
+Host: https://www.tanvirthedev.com
+
+# Sitemaps
+Sitemap: https://www.tanvirthedev.com/sitemap.xml
