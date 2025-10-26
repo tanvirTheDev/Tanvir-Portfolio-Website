@@ -62,7 +62,7 @@ export const metadata: Metadata = {
         alt: "Tanvir Ahamed",
       },
       {
-        url: "https://www.tanvirthedev.com/github-banner.png",
+        url: "https://www.tanvirthedev.com/github_banner.jpg",
         width: 1280,
         height: 640,
         alt: "Tanvir Ahamed – Full-Stack Developer",
