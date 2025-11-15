@@ -1,6 +1,5 @@
 import { ProjectCard } from "@/components/ProjectCard";
 
-// Sample projects data - replace with your actual data
 const projects = [
   {
     id: 1,
@@ -8,7 +7,7 @@ const projects = [
     slug: "ecommerce-platform",
     description:
       "A full-stack e-commerce platform built with Next.js and Stripe integration",
-    image: "/images/ecommerce.png",
+    image: "/images/ecommerce/ecommerce.png",
     technologies: [
       "Next.js",
       "TypeScript",
@@ -23,22 +22,15 @@ const projects = [
   },
   {
     id: 2,
-    title: "Task Management App",
-    slug: "task-management-app",
+    title: "JAF Washing Plant Ltd. Corporate Website",
+    slug: "jaf-washing-plant-corporate-site",
     description:
-      "A collaborative task management application with real-time updates",
-    image: "/placeholder.svg?height=250&width=400",
-    technologies: [
-      "React",
-      "Node.js",
-      "Socket.io",
-      "MongoDB",
-      "Express",
-      "Material-UI",
-    ],
-    category: "Web Application",
-    liveUrl: "https://example-tasks.com",
-    githubUrl: "https://github.com/username/task-app",
+      "A fully responsive corporate website developed for JAF Washing Plant Ltd., featuring animated UI components, dynamic sections, and an integrated meeting booking system using EmailJS.",
+    image: "/jaf-washing/jaf_washing_featured_image.png",
+    technologies: ["Next.js", "Tailwind CSS", "Framer Motion", "EmailJS"],
+    category: "Client Project",
+    liveUrl: "https://jaf-washing-plant-ltd.vercel.app",
+    githubUrl: "https://github.com/tanvirTheDev/jaf-washing-plant-ltd",
   },
 ];
 
